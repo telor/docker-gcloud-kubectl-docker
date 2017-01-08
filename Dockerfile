@@ -6,6 +6,7 @@ RUN apk update && apk add wget bash python && rm -rf /var/cache/apk/* && \
     rm google-cloud-sdk.tar.gz && \
     ls -l && \
     ./google-cloud-sdk/install.sh --usage-reporting=true --path-update=true && \
-    export PATH=$(pwd)/google-cloud-sdk/bin:$PATH && \
     gcloud --quiet components update && \
     gcloud --quiet components install kubectl
+
+ENV PATH $(pwd)/google-cloud-sdk/bin:$PATH
