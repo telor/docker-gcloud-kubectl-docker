@@ -1,4 +1,4 @@
-FROM docker:dind
+FROM docker:latest
 
 ENV PATH /google-cloud-sdk/bin:$PATH
 
